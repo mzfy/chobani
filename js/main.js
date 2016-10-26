@@ -42,7 +42,7 @@ function buySpoon(){
         l("spoonsamt").innerHTML = p(spoons);
         l("chobaniamount").innerHTML = p(chobani);
     }
-    var nextCost = Math.floor(100 * Math.pow(1.1, spoons));
+    var nextCost = Math.floor(50 * Math.pow(1.1, spoons));
     l("spoonscost").innerHTML = nextCost;
 }
 function buyMinivan(){
