@@ -1,6 +1,7 @@
 var chobani = 0;
 var flavour = 'plain';
 var moms = 0;
+var spoons = 0;
 var minivans = 0;
 
 function l(foo) {
@@ -33,15 +34,26 @@ function buyMom(){
     var nextCost = Math.floor(10 * Math.pow(1.1, moms));
     l("momscost").innerHTML = p(nextCost);
 }
+function buySpoon(){
+    var spoonscost = Math.floor(50 * Math.pow(1.1, minivans));
+    if (chobani >= spoonscost) {
+        spoons += 1;
+        chobani = chobani - spoonscost;
+        l("spoonsamt").innerHTML = p(spoons);
+        l("chobaniamount").innerHTML = p(chobani);
+    }
+    var nextCost = Math.floor(100 * Math.pow(1.1, spoons));
+    l("spoonscost").innerHTML = nextCost;
+}
 function buyMinivan(){
-    var minivanscost = Math.floor(50 * Math.pow(1.1, minivans));
+    var minivanscost = Math.floor(100 * Math.pow(1.1, minivans));
     if (chobani >= minivanscost) {
         minivans += 1;
         chobani = chobani - minivanscost;
         l("minivansamt").innerHTML = p(minivans);
         l("chobaniamount").innerHTML = p(chobani);
     }
-    var nextCost = Math.floor(50 * Math.pow(1.1, minivans));
+    var nextCost = Math.floor(100 * Math.pow(1.1, minivans));
     l("minivanscost").innerHTML = nextCost;
 }
 
@@ -49,5 +61,8 @@ window.setInterval(function(){
     clickChobani(moms);
 }, 1000);
 window.setInterval(function(){
-    clickChobani(minivans);
+    clickChobani(spoons);
 }, 500);
+window.setInterval(function(){
+    clickChobani(minivans);
+}, 250);
