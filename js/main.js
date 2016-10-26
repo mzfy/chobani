@@ -35,7 +35,7 @@ function buyMom(){
     l("momscost").innerHTML = p(nextCost);
 }
 function buySpoon(){
-    var spoonscost = Math.floor(50 * Math.pow(1.1, minivans));
+    var spoonscost = Math.floor(50 * Math.pow(1.1, spoons));
     if (chobani >= spoonscost) {
         spoons += 1;
         chobani = chobani - spoonscost;
