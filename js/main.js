@@ -9,7 +9,7 @@ function l(foo) {
 }
 function p(input) {
     var output = Math.round(input * 1000000)/1000000;
-    return output;
+    return output.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function clickChobani(number) {
