@@ -4,10 +4,6 @@ var moms = 0;
 var spoons = 0;
 var minivans = 0;
 
-$('.CLOSEBUTTON').on("click", function () {
-    $(this).parents('div').fadeOut();
-});
-
 function l(foo) {
     return document.getElementById(foo);
 }
@@ -36,7 +32,7 @@ function buyMom(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(10 * Math.pow(1.1, moms));
-    l("momscost").innerHTML = p(nextCost);
+    l("momscost").innerHTML = nextCost;
 }
 function buySpoon(){
     var spoonscost = Math.floor(50 * Math.pow(1.1, spoons));
@@ -47,7 +43,7 @@ function buySpoon(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(50 * Math.pow(1.1, spoons));
-    l("spoonscost").innerHTML = p(nextCost);
+    l("spoonscost").innerHTML = nextCost;
 }
 function buyMinivan(){
     var minivanscost = Math.floor(100 * Math.pow(1.1, minivans));
@@ -58,7 +54,7 @@ function buyMinivan(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(100 * Math.pow(1.1, minivans));
-    l("minivanscost").innerHTML = p(nextCost);
+    l("minivanscost").innerHTML = nextCost;
 }
 
 window.setInterval(function(){
