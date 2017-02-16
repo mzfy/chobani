@@ -98,4 +98,6 @@ p span.storecost {
     text-align: center;
     padding: 20px;
     width: 520px;
+    background: grey;
+    z-index: 999999999;
 }
