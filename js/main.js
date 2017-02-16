@@ -32,7 +32,7 @@ function buyMom(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(10 * Math.pow(1.1, moms));
-    l("momscost").innerHTML = nextCost;
+    l("momscost").innerHTML = p(nextCost);
 }
 function buySpoon(){
     var spoonscost = Math.floor(50 * Math.pow(1.1, spoons));
