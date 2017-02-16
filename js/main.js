@@ -47,7 +47,7 @@ function buySpoon(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(50 * Math.pow(1.1, spoons));
-    l("spoonscost").innerHTML = nextCost;
+    l("spoonscost").innerHTML = p(nextCost);
 }
 function buyMinivan(){
     var minivanscost = Math.floor(100 * Math.pow(1.1, minivans));
@@ -58,7 +58,7 @@ function buyMinivan(){
         l("chobaniamount").innerHTML = p(chobani);
     }
     var nextCost = Math.floor(100 * Math.pow(1.1, minivans));
-    l("minivanscost").innerHTML = nextCost;
+    l("minivanscost").innerHTML = p(nextCost);
 }
 
 window.setInterval(function(){
