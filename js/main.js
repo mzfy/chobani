@@ -4,6 +4,10 @@ var moms = 0;
 var spoons = 0;
 var minivans = 0;
 
+$('.CLOSEBUTTON').on("click", function () {
+    $(this).parents('div').fadeOut();
+});
+
 function l(foo) {
     return document.getElementById(foo);
 }
