@@ -90,3 +90,12 @@ p span.storetitle {
 p span.storecost {
     font-family: "Playfair Display", "Times New Roman", "Times", serif;
 }
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 20px;
+    width: 520px;
+}
